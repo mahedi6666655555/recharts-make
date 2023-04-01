@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // here is recharts import 
 import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Bar, BarChart } from 'recharts';
 // here is recharts import 
 
 
@@ -34,6 +34,23 @@ function App() {
           <Line type="monotone" dataKey="khan" stroke="#82ca9d" />
         </LineChart>
 
+
+
+      </div>
+      {/* here is another chart */}
+
+      <div>
+
+        <BarChart
+
+          width={300}
+          height={500}
+          data={users}
+        >
+          <YAxis />
+          <XAxis dataKey="name" />
+          <Bar dataKey="age" fill="#8884d8" />
+        </BarChart>
 
 
       </div>
